@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Cargat React -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactApp</title>
+  </head>
+  <body>
+    <!-- en este div se va a reenderisar el scrip de hola mundo -->
+    <div id="root"></div>
+
+    <!-- aqui esta importando la libreria de babel -->
+    <script type="text/babel">
+      // esta constante esta buscando el div con el id=root
+      // le hace la referencia al div
+      const divRoot = document.querySelector("#root");
+
+      const nombre = "goku";
+
+      // esto es lo que queremos reendemisar
+      // si pones las llaves podemos poner codigo de javascrip normal
+      const h1Tag = <h1>hola, soy {nombre}</h1>;
+
+      //   aqui ya le estamos diciendo que mi h1tag correlo en el div root
+      ReactDOM.render(h1Tag, divRoot);
+    </script>
+  </body>
+</html>
